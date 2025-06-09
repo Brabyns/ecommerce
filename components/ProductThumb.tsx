@@ -25,6 +25,12 @@ function ProductThumb({ product }:{product: Product}){
                    />
 
                )}
+               {isOutOfStock && (
+                   <div className="absolute inset-0 flex items-center justify-center bg-black/4">
+                       <span className="text-white font-bold text-lg bg-black/70 px-3 py-1 rounded drop-shadow-lg" >Out of Stock</span>
+                   </div>
+               )}
+
            </div>
             <div className="p-4">
                 <h2 className="text-lg font-semibold text-gray-800 truncate">
@@ -40,10 +46,13 @@ function ProductThumb({ product }:{product: Product}){
                         .join("") || "No description available."
                     }
                 </p>
-                <p className="mt-2 text-lg text-gray-900 font-bold">
+                <p className="mt-2 text-lg text-gray-900 font-bold ">
                     ${product.price?.toFixed(2)}
                 </p>
+
+
             </div>
+
         </Link>
 
     )

@@ -14,6 +14,16 @@ export const salesType = defineType({
 
         }),
         defineField({
+            name:"slug",
+            title: "Slug",
+            type: "slug",
+            options:{
+                source: "title",
+                maxLength: 96
+            },
+            validation: (Rule) => Rule.required(),
+        }),
+        defineField({
             name:"description",
             title: "Sale Description",
             type: "string",
@@ -51,7 +61,7 @@ export const salesType = defineType({
         ],
     preview:{
         select: {
-            title:"Title",
+            title:"title",
             discountAmount: "discountAmount",
             couponCode: "couponCode",
             isActive: "isActive",

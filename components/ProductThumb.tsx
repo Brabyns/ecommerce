@@ -47,7 +47,7 @@ function ProductThumb({ product }:{product: Product}){
                     }
                 </p>
                 <p className="mt-2 text-lg text-gray-900 font-bold ">
-                    ${product.price?.toFixed(2)}
+                    Ksh. {product.price?.toFixed(2)}
                 </p>
 
 

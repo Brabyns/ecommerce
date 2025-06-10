@@ -11,7 +11,7 @@ function ProductThumb({ product }:{product: Product}){
         <Link
             href = {`/product/${product.slug?.current}`}
             className={`group flex flex-col bg-white rounded-lg border border-gray-200
-             shadow-sm hover:shadow-md trasition-all
+             shadow-sm hover:shadow-md transition-all
             duration-200 overflow-hidden ${isOutOfStock ? "opacity-50" : ""}`}
         >
            <div className="relative aspect-square w-full overflow-hidden">
